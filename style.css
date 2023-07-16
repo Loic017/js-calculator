@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    background: rgb(184, 71, 121);
+    background: linear-gradient(
+        199deg,
+        rgba(184, 71, 121, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+    );
+}
+
+.outside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-container {
+    box-sizing: border-box;
+    padding: 20px 200px;
+    background-color: #d4d4d4;
+    width: 350px;
+    height: 430px;
+    border: 2px solid black;
+    /* border-radius: 10px; */
+    align-items: center;
+    justify-content: center;
+    /* Grid layout */
+    display: grid;
+    grid-template-areas:
+        "screen screen screen"
+        "numbers numbers operations";
+    grid-template-rows: 100px 250px;
+    gap: 10px;
+    /* grid-template-columns: 50px 100px; */
+}
+
+.screen {
+    background-color: white;
+    /* padding: 20px 150px; */
+    grid-area: screen;
+    /* border-radius: 10px; */
+    border: 2px solid black;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 5px;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    /* word-break: break-all; */
+    height: 70px;
+    margin-bottom: 40px;
+}
+
+.screen textarea {
+    text-align: right;
+    align-self: end;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+
+.numbers {
+    grid-area: numbers;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(95, 158, 160, 0.363);
+    /* border-radius: 10px; */
+    padding: 5px;
+}
+
+.operations {
+    grid-area: operations;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgba(101, 95, 160, 0.363);
+    /* border-radius: 20px; */
+    padding: 5px;
+}
+
+.numbers button {
+    padding: 20px 30px;
+    border: 2px solid #fff;
+    /* border-radius: 10px; */
+    background-color: cadetblue;
+    color: #fff;
+}
+
+.operations button {
+    padding: 20px 30px;
+    border: 2px solid #fff;
+    /* border-radius: 10px; */
+    background-color: rgb(101, 95, 160);
+    color: #fff;
+}
+
+button {
+    font-size: 23px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+    transition: 0.1s;
+}
